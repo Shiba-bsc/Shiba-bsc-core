@@ -6,7 +6,17 @@
   "license": "MIT",
   "scripts": {
     "build:ts": "yarn run tsc",
-    "build:sc": "npx hardhat compile --force"
+    "build:sc": "npx hardhat compile --force",
+
+    "=======================": "==========================diff mnemonic==============================",
+    "deployShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployShiba.ts",
+    "infoShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/infoShiba.ts",
+
+    "populate": "HARDHAT_NETWORK=bsc ts-node ./scripts/populate.ts",
+
+
+    "======================": "==========================diff mnemonic=============================="
+
   },
   "dependencies": {
     "@openzeppelin/contracts": "^3.4.1",
