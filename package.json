@@ -10,19 +10,72 @@
 
     "=======================": "==========================diff mnemonic==============================",
     "deployShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployShiba.ts",
+    "deployLottery": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployLottery.ts",
+    "deployToolboxErc20": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployToolboxErc20.ts",
+    "testToolboxErc20": "HARDHAT_NETWORK=bsc ts-node ./scripts/testToolboxErc20.ts",
+
+    "drawLottery": "HARDHAT_NETWORK=bsc ts-node ./scripts/drawLottery.ts",
+    "infoLottery": "HARDHAT_NETWORK=bsc ts-node ./scripts/infoLottery.ts",
+
+    "updateMdxPools": "HARDHAT_NETWORK=bsc ts-node ./scripts/updateMdxPools.ts",
+    "updateMdxPoolsRoute": "HARDHAT_NETWORK=bsc ts-node ./scripts/updateMdxPoolsRoute.ts",
+    "updateMdxPoolsAllocPoint": "HARDHAT_NETWORK=bsc ts-node ./scripts/updateMdxPoolsAllocPoint.ts",
+
+    "updateEthAndShiba": "HARDHAT_NETWORK=bsc ts-node scripts/updateEthAndShiba.ts",
+
+
     "infoShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/infoShiba.ts",
+    "monitorShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/monitorShiba.ts",
 
     "populate": "HARDHAT_NETWORK=bsc ts-node ./scripts/populate.ts",
+    "showAddress": "HARDHAT_NETWORK=bsc ts-node ./scripts/showAddress.ts",
 
 
-    "======================": "==========================diff mnemonic=============================="
+    "batchSendEth": "HARDHAT_NETWORK=bsc ts-node ./scripts/batchSendEth.ts",
+    "batchERC20Transfer2": "HARDHAT_NETWORK=bsc ts-node ./scripts/batchERC20Transfer2.ts",
+    "batchERC20Transfer": "HARDHAT_NETWORK=bsc ts-node ./scripts/batchERC20Transfer.ts",
+    "approvePancake": "HARDHAT_NETWORK=bsc ts-node ./scripts/approvePancake.ts",
+    "buyShiba1234": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShiba1234.ts",
+    "buyShiba1234_2": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShiba1234_2.ts",
 
+    "sellShiba1234": "HARDHAT_NETWORK=bsc ts-node scripts/sellShibaWunao.ts",
+    "sparseShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/sparseShiba.ts",
+    "sparseShibaRandom": "HARDHAT_NETWORK=bsc ts-node ./scripts/sparseShibaRandom.ts",
+
+    "buyShibaBot": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShibaBot.ts",
+    "buyShibaFrequency": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShibaFrequency.ts",
+
+    "sellShibaOneByOne": "HARDHAT_NETWORK=bsc ts-node ./scripts/sellShibaOneByOne.ts",
+    "sellShibaCondition": "HARDHAT_NETWORK=bsc ts-node ./scripts/sellShibaCondition.ts",
+
+    "sellLycrus": "HARDHAT_NETWORK=bsc ts-node ./scripts/sellLycrus.ts",
+    "buyLycrus": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyLycrus.ts",
+
+    "hippo": "HARDHAT_NETWORK=bsc ts-node scripts/hippo.ts",
+    "ethVaultTake": "HARDHAT_NETWORK=bsc ts-node scripts/ethVaultTake.ts",
+    "airDropTransfer": "HARDHAT_NETWORK=bsc ts-node scripts/airDropTransfer.ts",
+
+    "static": "HARDHAT_NETWORK=bsc ts-node ./scripts/static.ts",
+
+
+    "deployOracle": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployOracle.ts",
+    "testOracle": "HARDHAT_NETWORK=bsc ts-node ./scripts/testOracle.ts",
+    "infoOracle": "HARDHAT_NETWORK=bsc ts-node ./scripts/infoOracle.ts",
+
+    "======================": "==========================diff mnemonic==============================",
+    "test": "HARDHAT_NETWORK=hardhat ts-node ./scripts/test.ts",
+    "compare": "HARDHAT_NETWORK=hardhat ts-node ./scripts/compare.ts",
+    "process": "HARDHAT_NETWORK=hardhat ts-node ./scripts/process.ts",
+    "testEthVault": "HARDHAT_NETWORK=hardhat ts-node ./scripts/testEthVault.ts",
+    "tokenList": "HARDHAT_NETWORK=hardhat ts-node ./scripts/tokenList.ts"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^3.4.1",
     "sqlite3": "^5.0.2",
     "typeorm": "^0.2.31",
-    "csv-parse": "^4.15.3"
+    "csv-parse": "^4.15.3",
+    "cron": "1.8.2",
+    "@types/cron": "1.7.2"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",

@@ -32,8 +32,8 @@ abstract contract Vault is IVault, ERC20, ReentrancyGuard, Controllerable {
     //you have to deploy Controller first
     constructor (IERC20 _capital, IController _controller) public
     ERC20(
-        string(abi.encodePacked("bird", ERC20(address(_capital)).name())),
-        string(abi.encodePacked("b", ERC20(address(_capital)).symbol()))
+        string(abi.encodePacked("s", ERC20(address(_capital)).name())),
+        string(abi.encodePacked("s", ERC20(address(_capital)).symbol()))
     )
     Controllerable(_controller){
         capital_ = _capital;
