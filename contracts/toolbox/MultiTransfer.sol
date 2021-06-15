@@ -7,13 +7,13 @@ import '@openzeppelin/contracts/math/SafeMath.sol';
 import '@openzeppelin/contracts/utils/Address.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
-contract EthDispatcher is Ownable{
+contract MultiTransfer is Ownable{
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
     using Address for address payable;
     constructor()public{}
 
-    function dispatch(IERC20 token, address payable[] calldata to, uint256[] calldata amount) payable onlyOwner external{
+    function dispatch(IERC20 token, address payable[] calldata to, uint256[] calldata amount) payable external{
         require(to.length == amount.length,"to.length == amount.length");
         if(address(token) == address (0)){
             for(uint256 i = 0; i< to.length; i++){
@@ -23,6 +23,15 @@ contract EthDispatcher is Ownable{
             for(uint256 i = 0; i< to.length; i++){
                 token.safeTransferFrom(msg.sender,to[i],amount[i]);
             }
+        }
+    }
+
+    function transferBack(IERC20 erc20Token, address to, uint256 amount) external onlyOwner {
+        if (address(erc20Token) == address(0)) {
+            //ignore potential exceptions
+            payable(to).transfer(amount);
+        } else {
+            erc20Token.safeTransfer(to, amount);
         }
     }
 }

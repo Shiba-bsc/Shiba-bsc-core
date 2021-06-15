@@ -7,7 +7,6 @@
   "scripts": {
     "build:ts": "yarn run tsc",
     "build:sc": "npx hardhat compile --force",
-
     "=======================": "==========================diff mnemonic==============================",
     "deployShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployShiba.ts",
     "deployLottery": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployLottery.ts",
@@ -20,21 +19,22 @@
     "updateMdxPools": "HARDHAT_NETWORK=bsc ts-node ./scripts/updateMdxPools.ts",
     "updateMdxPoolsRoute": "HARDHAT_NETWORK=bsc ts-node ./scripts/updateMdxPoolsRoute.ts",
     "updateMdxPoolsAllocPoint": "HARDHAT_NETWORK=bsc ts-node ./scripts/updateMdxPoolsAllocPoint.ts",
-
     "updateEthAndShiba": "HARDHAT_NETWORK=bsc ts-node scripts/updateEthAndShiba.ts",
-
 
     "infoShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/infoShiba.ts",
     "monitorShiba": "HARDHAT_NETWORK=bsc ts-node ./scripts/monitorShiba.ts",
-
     "populate": "HARDHAT_NETWORK=bsc ts-node ./scripts/populate.ts",
+
     "showAddress": "HARDHAT_NETWORK=bsc ts-node ./scripts/showAddress.ts",
 
+    "addWhitelist": "HARDHAT_NETWORK=bsc ts-node ./scripts/addWhitelist.ts",
 
     "batchSendEth": "HARDHAT_NETWORK=bsc ts-node ./scripts/batchSendEth.ts",
     "batchERC20Transfer2": "HARDHAT_NETWORK=bsc ts-node ./scripts/batchERC20Transfer2.ts",
     "batchERC20Transfer": "HARDHAT_NETWORK=bsc ts-node ./scripts/batchERC20Transfer.ts",
+
     "approvePancake": "HARDHAT_NETWORK=bsc ts-node ./scripts/approvePancake.ts",
+
     "buyShiba1234": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShiba1234.ts",
     "buyShiba1234_2": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShiba1234_2.ts",
 
@@ -44,23 +44,34 @@
 
     "buyShibaBot": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShibaBot.ts",
     "buyShibaFrequency": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShibaFrequency.ts",
+    "buyShibaWhitlist": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShibaWhitlist.ts",
+    "buyShibaWhitlist20": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShibaWhitlist20.ts",
+    "buyShibaWhitlistArrayGenerate": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyShibaWhitlistArrayGenerate.ts",
 
     "sellShibaOneByOne": "HARDHAT_NETWORK=bsc ts-node ./scripts/sellShibaOneByOne.ts",
     "sellShibaCondition": "HARDHAT_NETWORK=bsc ts-node ./scripts/sellShibaCondition.ts",
-
     "sellLycrus": "HARDHAT_NETWORK=bsc ts-node ./scripts/sellLycrus.ts",
+
     "buyLycrus": "HARDHAT_NETWORK=bsc ts-node ./scripts/buyLycrus.ts",
 
     "hippo": "HARDHAT_NETWORK=bsc ts-node scripts/hippo.ts",
+
     "ethVaultTake": "HARDHAT_NETWORK=bsc ts-node scripts/ethVaultTake.ts",
+
     "airDropTransfer": "HARDHAT_NETWORK=bsc ts-node scripts/airDropTransfer.ts",
 
     "static": "HARDHAT_NETWORK=bsc ts-node ./scripts/static.ts",
 
-
     "deployOracle": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployOracle.ts",
     "testOracle": "HARDHAT_NETWORK=bsc ts-node ./scripts/testOracle.ts",
     "infoOracle": "HARDHAT_NETWORK=bsc ts-node ./scripts/infoOracle.ts",
+
+    "deployMultiTransfer": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployMultiTransfer.ts",
+
+    "========================": "==========================diff mnemonic==============================",
+
+
+    "deployMultiTransferCharge": "HARDHAT_NETWORK=ropsten ts-node ./scripts/deployMultiTransferCharge.ts",
 
     "======================": "==========================diff mnemonic==============================",
     "test": "HARDHAT_NETWORK=hardhat ts-node ./scripts/test.ts",
@@ -73,9 +84,7 @@
     "@openzeppelin/contracts": "^3.4.1",
     "sqlite3": "^5.0.2",
     "typeorm": "^0.2.31",
-    "csv-parse": "^4.15.3",
-    "cron": "1.8.2",
-    "@types/cron": "1.7.2"
+    "csv-parse": "^4.15.3"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
