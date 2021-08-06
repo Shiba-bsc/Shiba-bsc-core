@@ -12,6 +12,7 @@
     "deployLottery": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployLottery.ts",
     "deployToolboxErc20": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployToolboxErc20.ts",
     "testToolboxErc20": "HARDHAT_NETWORK=bsc ts-node ./scripts/testToolboxErc20.ts",
+    "deployFloki": "HARDHAT_NETWORK=bsc ts-node scripts/deployFloki.ts",
 
     "drawLottery": "HARDHAT_NETWORK=bsc ts-node ./scripts/drawLottery.ts",
     "infoLottery": "HARDHAT_NETWORK=bsc ts-node ./scripts/infoLottery.ts",
@@ -68,17 +69,28 @@
 
     "deployMultiTransfer": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployMultiTransfer.ts",
 
+    "deploySwap": "HARDHAT_NETWORK=bsc ts-node ./scripts/deploySwap.ts",
+
+
     "========================": "==========================diff mnemonic==============================",
 
 
-    "deployMultiTransferCharge": "HARDHAT_NETWORK=ropsten ts-node ./scripts/deployMultiTransferCharge.ts",
+    "deployMultiTransferCharge-ropsten": "HARDHAT_NETWORK=ropsten ts-node ./scripts/deployMultiTransferCharge.ts",
+    "deployMockUSDT": "HARDHAT_NETWORK=ropsten ts-node ./scripts/deployMockUSDT.ts",
+
+    "==========================": "==========================diff mnemonic==============================",
+
+
+    "deployMultiTransferCharge": "HARDHAT_NETWORK=mainnet ts-node ./scripts/deployMultiTransferCharge.ts",
 
     "======================": "==========================diff mnemonic==============================",
     "test": "HARDHAT_NETWORK=hardhat ts-node ./scripts/test.ts",
     "compare": "HARDHAT_NETWORK=hardhat ts-node ./scripts/compare.ts",
     "process": "HARDHAT_NETWORK=hardhat ts-node ./scripts/process.ts",
     "testEthVault": "HARDHAT_NETWORK=hardhat ts-node ./scripts/testEthVault.ts",
-    "tokenList": "HARDHAT_NETWORK=hardhat ts-node ./scripts/tokenList.ts"
+    "tokenList": "HARDHAT_NETWORK=hardhat ts-node ./scripts/tokenList.ts",
+    "tokenListMainnet": "HARDHAT_NETWORK=hardhat ts-node ./scripts/tokenListMainnet.ts"
+
   },
   "dependencies": {
     "@openzeppelin/contracts": "^3.4.1",
